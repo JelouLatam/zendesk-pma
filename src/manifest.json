@@ -7,8 +7,7 @@
   "defaultLocale": "en",
   "private": true,
   "domainWhitelist": [
-    "chatbot.01lab.co",
-    "webhook.site"
+    "chatbot.01lab.co"
   ],
   "location": {
     "support": {
