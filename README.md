@@ -14,7 +14,7 @@ This repo contains a scaffold to help developers build [apps for Zendesk product
 ### Setup
 1. Clone or fork this repo
 2. Change (`cd`) into the `app_scaffolds/packages/react` directory
-3. Run `yarn install`
+3. Run `npm install`
 
 To run your app locally in Zendesk, you need the latest [Zendesk CLI](https://github.com/zendesk/zcli).
 
@@ -23,7 +23,7 @@ To run your app locally in Zendesk, you need the latest [Zendesk CLI](https://gi
 To serve the app to your Zendesk instance with `?zcli_apps=true`, open a new terminal and run
 
 ```
-yarn run watch
+npm run watch
 ```
 and then open a new terminal under `apps_scaffolds/packages/react` directory and run
 ```
@@ -65,7 +65,7 @@ The folder and file structure of the App Scaffold is as follows:
 |:----------------------------------------|:---------------------------------------------------------------------------------------------|
 | [`.github/`](#.github)                  | The folder to store PULL_REQUEST_TEMPLATE.md, ISSUE_TEMPLATE.md and CONTRIBUTING.md, etc     |
 | [`dist/`](#dist)                        | The folder in which webpack packages the built version of your app                           |
-| [`spec/`](#spec)                        | The folder in which all of your test files live                                              |
+live                                              |
 | [`src/`](#src)                          | The folder in which all of your source JavaScript, CSS, templates and translation files live |
 | [`webpack/`](#src)                      | translations-loader and translations-plugin to support i18n in the application               |
 | [`.babelrc`](#packagejson)              | Configuration file for Babel.js                                                              |
@@ -77,9 +77,6 @@ The folder and file structure of the App Scaffold is as follows:
 
 #### dist
 The dist directory is created when you run the app building scripts. You will need to package this folder when submitting your app to the Zendesk Apps Marketplace, It is also the folder you will have to serve when using [ZCLI](https://developer.zendesk.com/documentation/apps/app-developer-guide/zcli/). It includes your app's manifest.json file, an assets folder with all your compiled JavaScript and CSS as well as HTML and images.
-
-#### spec
-The spec directory is where all your tests and test helpers live. Tests are not required to submit/upload your app to Zendesk and your test files are not included in your app's package, however it is good practice to write tests to document functionality and prevent bugs.
 
 #### src
 The src directory is where your raw source code lives. The App Scaffold includes different directories for JavaScript, stylesheets, templates, images and translations. Most of your additions will be in here (and spec, of course!).
@@ -101,7 +98,7 @@ This directory contains custom tooling to process translations at build time:
 [jest.config.js](https://jestjs.io/docs/en/configuration.html) is the configuration file for Jest
 
 #### package.json
-package.json is the configuration file for [Yarn](https://yarnpkg.com/), which is a package manager for JavaScript. This file includes information about your project and its dependencies. For more information on how to configure this file, see [Yarn package.json](https://yarnpkg.com/en/docs/package-json).
+package.json is the configuration file for [npm](https://npmpkg.com/), which is a package manager for JavaScript. This file includes information about your project and its dependencies. For more information on how to configure this file, see [npm package.json](https://npmpkg.com/en/docs/package-json).
 
 #### postcss.config.js
 postcss.config.js is the configuration file for [PostCSS](https://postcss.org/)
@@ -114,36 +111,12 @@ The App Scaffold provides some helper functions in `/src/javascripts/lib/helpers
 
 ### I18n
 The I18n (internationalization) module in `/src/javascripts/lib/i18n.js` provides a `t` method to look up translations based on a key. For more information, see [Using the I18n module](https://github.com/zendesk/app_scaffolds/blob/master/packages/react/doc/i18n.md).
-
-## Parameters and Settings
-If you need to test your app with a `parameters` section in `dist/manifest.json`, foreman might crash with a message like:
-
-> Would have prompted for a value interactively, but zcli is not listening to keyboard input.
-
-To resolve this problem, set default values for parameters or create a `settings.yml` file in the root directory of your app scaffold-based project, and populate it with your parameter names and test values. For example, using a parameters section like:
-
-```json
-{
-  "parameters": [
-    {
-      "name": "myParameter"
-    }
-  ]
-}
-```
-
-create a `settings.yml` containing:
-
-```yaml
-myParameter: 'some value!'
-```
-
 ## Testing
 
 The App Scaffold is currently setup for testing with [Jest](https://jestjs.io/). To run specs, open a new terminal and run
 
 ```
-yarn test
+npm test
 ```
 
 Specs live under the `spec` directory.
@@ -176,30 +149,4 @@ zcli apps:package dist
 
 taking note of the created filename.
 
-For more information on the Zendesk CLI please see the [documentation](https://developer.zendesk.com/documentation/apps/app-developer-guide/zcli/).
-
-## External Dependencies
-External dependencies are defined in [webpack.config.js](https://github.com/zendesk/app_scaffolds/blob/master/packages/react/webpack.config.js). This ensures these dependencies are included in your app's `index.html`.
-
-## Contribute
-* Put up a PR into the master branch.
-* CC and get a +1 from @zendesk/vegemite.
-
-## Bugs
-Submit Issues via [GitHub](https://github.com/zendesk/app_scaffolds/issues/new) or email support@zendesk.com.
-
-## Useful Links
-Links to maintaining team, confluence pages, Datadog dashboard, Kibana logs, etc
-- https://developer.zendesk.com/
-- https://github.com/zendesk/zendesk_apps_tools
-- https://webpack.github.io
-- https://developer.zendesk.com/documentation/apps/build-an-app/using-react-in-a-support-app/
-
-## Copyright and license
-Copyright 2018 Zendesk
-
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.
-
-You may obtain a copy of the License at
-http://www.apache.org/licenses/LICENSE-2.0
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+For more information on the Zendesk CLI see the [documentation](https://developer.zendesk.com/documentation/apps/app-developer-guide/zcli/).
