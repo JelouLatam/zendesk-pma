@@ -1,17 +1,13 @@
 {
-  "name": "app_scaffold",
-  "version": "2.0.0",
-  "description": "A scaffold for developers to build ZAF v2 apps",
-  "keywords": [
-    "zendesk",
-    "app",
-    "framework"
-  ],
-  "author": "Zendesk",
-  "license": "Apache-2.0",
+  "name": "zendesk-pma",
+  "version": "0.0.1",
+  "description": "A Jelou application for zendesk integration",
+  "keywords": [],
+  "author": "01lab",
   "engines": {
     "node": ">=18.12.1"
   },
+  "license": "ISC",
   "scripts": {
     "test": "jest",
     "watch": "webpack --watch --mode development",

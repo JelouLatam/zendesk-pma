@@ -1,8 +1,7 @@
 {
-  "name": "Zendesk App",
+  "name": "Jelou App",
   "author": {
-    "name": "dev@jelou.com",
-    "email": "dev@jelou.com"
+    "name": "01lab"
   },
   "defaultLocale": "en",
   "private": true,
