@@ -1,7 +1,8 @@
 {
   "name": "Jelou App",
   "author": {
-    "name": "01lab"
+    "name": "01lab",
+    "email": "zendesk@jelou.ai"
   },
   "defaultLocale": "en",
   "private": true,
