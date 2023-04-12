@@ -1,0 +1,8 @@
+{
+  "app": {
+    "name": "Jelou App"
+  },
+  "default": {
+    "description_greeting": "Hi {{userName}}, this app is a Jelou integration."
+  }
+}
