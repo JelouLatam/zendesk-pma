@@ -3,12 +3,7 @@ const fs = require('fs')
 const JS_INDENT = 2
 
 const marketplaceKeys = [
-  'name',
-  'description',
-  'short_description',
-  'long_description',
-  'installation_instructions',
-  'parameters'
+  'name'
 ]
 
 class TranslationsPlugin {
