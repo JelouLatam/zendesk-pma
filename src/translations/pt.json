@@ -1,6 +1,9 @@
 {
   "app": {
-    "name": "Jelou App"
+    "name": "Jelou App",
+    "short_description": "Integre o Jelou com o Zendesk",
+    "long_description": "O Jelou App é uma poderosa integração que permite conectar perfeitamente sua conta Jelou com o Zendesk.",
+    "installation_instructions": "Para instalar o Jelou App, basta fazer login na sua conta do Zendesk e navegar até o App Marketplace. Procure por 'Jelou App' e clique no botão Instalar. Siga as instruções para concluir a instalação e começar a usar o Jelou App hoje!"
   },
   "default": {
     "description_greeting": "Olá {{userName}}, este aplicativo é uma integração da Jelou."
