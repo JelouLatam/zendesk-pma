@@ -5,6 +5,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const TranslationsPlugin = require("./webpack/translations-plugin");
 const Dotenv = require("dotenv-webpack");
+const TerserPlugin = require('terser-webpack-plugin');
 
 const externalAssets = {
   js: ["https://assets.zendesk.com/apps/sdk/2.0/zaf_sdk.js"],
@@ -78,7 +79,17 @@ module.exports = {
       template: "./src/templates/iframe.html",
       filename: "iframe.html",
     }),
-
     new Dotenv(),
   ],
+  optimization: {
+    minimizer: [new TerserPlugin({
+      extractComments: false,
+    })],
+    minimize: true,
+  },
+  performance: {
+    hints: false,
+    maxAssetSize: 400000,
+  },
+  
 };

@@ -1,6 +1,9 @@
 {
   "app": {
-    "name": "Jelou App"
+    "name": "Jelou App",
+    "short_description": "Integrate Jelou with Zendesk",
+    "long_description": "Jelou App is a powerful integration that allows you to seamlessly connect your Jelou account with Zendesk.",
+    "installation_instructions": "To install Jelou App, simply log in to your Zendesk account and navigate to the App Marketplace. Search for 'Jelou App' and click the Install button. Follow the prompts to complete the installation and start using Jelou App today!"
   },
   "default": {
     "description_greeting": "Hi {{userName}}, this app is a Jelou integration."

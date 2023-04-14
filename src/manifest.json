@@ -2,10 +2,11 @@
   "name": "Jelou App",
   "author": {
     "name": "01lab",
-    "email": "zendesk@jelou.ai"
+    "email": "zendesk@jelou.ai",
+    "url": "https://apps.jelou.ai"
   },
   "defaultLocale": "en",
-  "private": true,
+  "private": false,
   "domainWhitelist": [
     "chatbot.01lab.co"
   ],
